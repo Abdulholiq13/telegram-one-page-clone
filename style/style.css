@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    scroll-behavior: smooth;
+}
+.main{
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    user-select: none;
+}
+.mobile{
+    width: 380px;
+    height: 700px;
+    background: url("../images/bg.jpg") no-repeat center/cover;
+    border-radius: 36px;
+    border: 8px solid #000;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+.mobile::before{
+    content:"";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 18px;
+    background: #000;
+    border-radius: 0 0 8px 8px;
+}
+.header{
+    width: 100%;
+    height: 70px;
+    background: #fff;
+    padding: 10px;
+    padding-top: 15px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.header__avatar{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.header__status{
+    font-size: 14px;
+    color: #999;
+}
+.content{
+    flex: 1;
+    padding: 10px;
+    overflow: auto;
+    position: relative;
+}
+.content::-webkit-scrollbar{
+    width: 0;
+}
+.content__image{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.content__image img{
+    width: 200px;
+}
+.message{
+    width: 220px;
+    background: #E2FFC7;
+    padding: 5px 10px;
+    border-radius: 10px 10px 10px 0;
+    margin-top: 6px;
+}
+
+.message p{
+    word-break: break-all;
+}
+.message span{
+    display: block;
+    text-align: right;
+    font-size: 12px;
+}
+.my-message{
+    background: #fff;
+    margin-left: calc(100% - 220px);
+    border-radius: 10px 10px 0 10px;
+}
+.message-image{
+    background: transparent;
+}
+.message-image img{
+    width: 150px;
+}
+
+
+
+.form{
+    width: 100%;
+    height: 50px;
+    background: blue;
+    display: flex;
+}
+.form input{
+    flex: 1;
+    border: none;
+    text-indent: 16px;
+    outline: none;
+}
+
+.form button{
+    padding: 0 12px;
+}
